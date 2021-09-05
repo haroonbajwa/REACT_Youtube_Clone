@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Paper, TextField } from '@material-ui/core'
+import { Paper, TextField, Grid } from '@material-ui/core'
 
 const SearchBar = ({ onFormSubmit }) => {
 
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('youtube');
     
 
     const handleChange = (e) => {
@@ -18,9 +18,16 @@ const SearchBar = ({ onFormSubmit }) => {
 
     return (
         <Paper elevation={6} style={{padding: '25px'}}>
-            <form onSubmit={handleSubmit}>
-                <TextField fullWidth label="Search" onChange={handleChange} />
-            </form>
+            <Grid container spacing={10}>
+                <Grid item md={3} sm={2}>
+                    <img style={{width:'100px'}} src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png" alt="YouTube" />
+                </Grid>
+                <Grid item md={5} sm={7}>
+                    <form onSubmit={handleSubmit}>
+                        <TextField fullWidth label="Search" onChange={handleChange} />
+                    </form>
+                </Grid>
+            </Grid>
         </Paper>
     )
 }
