@@ -18,11 +18,11 @@ const SearchBar = ({ onFormSubmit }) => {
 
     return (
         <Paper elevation={6} style={{padding: '25px'}}>
-            <Grid container spacing={10}>
-                <Grid item md={3} sm={2}>
+            <Grid container spacing={5}>
+                <Grid item md={2} sm={2}>
                     <img style={{width:'100px'}} src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png" alt="YouTube" />
                 </Grid>
-                <Grid item md={5} sm={7}>
+                <Grid item md={9} sm={10}>
                     <form onSubmit={handleSubmit}>
                         <TextField fullWidth label="Search" onChange={handleChange} />
                     </form>
